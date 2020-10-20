@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import os
 
+
 initial_season = 8485
 year = initial_season
 
@@ -17,6 +18,7 @@ while season != 1819:
     if req.status_code == 200:
         url_content = req.content
         output_file_name = 'PL' + season_4_digits + '.csv'
+
         output_file = open(output_file_name, 'wb')
         output_file.write(url_content)
         output_file.close()
